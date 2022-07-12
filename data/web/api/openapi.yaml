@@ -503,7 +503,7 @@ paths:
                           restart_sogo: "1"
                           backupmx: "0"
                           defquota: "3072"
-                          description: some decsription
+                          description: some description
                           domain: domain.tld
                           mailboxes: "10"
                           maxquota: "10240"
