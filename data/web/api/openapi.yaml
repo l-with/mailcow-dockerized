@@ -27,7 +27,7 @@ components:
       type: apiKey
       in: header
       name: X-API-Key
-  responses:
+  schemas:
     Unauthorized:
       description: Unauthorized
       content:
@@ -148,9 +148,9 @@ paths:
     post:
       responses:
         "401":
-          $ref: "#/components/responses/Unauthorized"
+          $ref: "#/components/schemas/Unauthorized"
         "200":
-          $ref: "#/components/responses/AddAlias"
+          $ref: "#/components/schemas/AddAlias"
       tags:
         - Aliases
       description: >-
