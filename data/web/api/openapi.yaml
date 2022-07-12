@@ -28,25 +28,21 @@ components:
       in: header
       name: X-API-Key
   schemas:
-    Unauthorized:
-      type: object
-      description: Unauthorized
-      properties:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                type:
-                  type: string
-                  example: error
-                msg:
-                  type: string
-                  example: authentication failed
-              required:
-                - type
-                - msg
- 
+    properties:
+      application/json:
+        schema:
+          type: object
+          properties:
+            type:
+              type: string
+              example: error
+            msg:
+              type: string
+              example: authentication failed
+          required:
+            - type
+            - msg
+
 security:
   - ApiKeyAuth: []
 
@@ -55,7 +51,11 @@ paths:
     post:
       responses:
         "401":
-          $ref: "#/components/schemas/Unauthorized"
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Unauthorized"
         "200":
           content:
             application/json:
