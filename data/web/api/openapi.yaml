@@ -48,7 +48,6 @@ components:
 
     AddAlias:
       description: AddAlias OK
-      headers: {}
       type: object
       content:
         application/json:
@@ -86,7 +85,6 @@ components:
 
     AddDomain:
       description: AddDomain OK
-      headers: {}
       type: object
       content:
         application/json:
@@ -154,8 +152,42 @@ paths:
         "401":
           $ref: "#/components/schemas/Unauthorized"
         "200":
-          $ref: "#/components/schemas/AddAlias"
-      tags:
+          content:
+            application/json:
+              examples:
+                response:
+                  value:
+                    - log:
+                        - mailbox
+                        - add
+                        - alias
+                        - active: "1"
+                          address: alias@domain.tld
+                          goto: destination@domain.tld
+                        - null
+                      msg:
+                        - alias_added
+                        - alias@domain.tld
+                      type: success
+              schema:
+                properties:
+                  log:
+                    description: contains request object
+                    items: {}
+                    type: array
+                  msg:
+                    items: {}
+                    type: array
+                  type:
+                    enum:
+                      - success
+                      - danger
+                      - error
+                    type: string
+                type: object
+          description: OK
+          headers: {}
+        tags:
         - Aliases
       description: >-
         You may create your own mailbox alias using this action. It takes a JSON
@@ -543,7 +575,63 @@ paths:
         "401":
           $ref: "#/components/schemas/Unauthorized"
         "200":
-          $ref: "#/components/schemas/AddDomain"
+          content:
+            application/json:
+              examples:
+                response:
+                  value:
+                    - log:
+                        - ratelimit
+                        - edit
+                        - domain
+                        - object: domain.tld
+                          rl_frame: s
+                          rl_value: "10"
+                      msg:
+                        - rl_saved
+                        - domain.tld
+                      type: success
+                    - log:
+                        - mailbox
+                        - add
+                        - domain
+                        - active: "1"
+                          aliases: "400"
+                          restart_sogo: "1"
+                          backupmx: "0"
+                          defquota: "3072"
+                          description: some decsription
+                          domain: domain.tld
+                          mailboxes: "10"
+                          maxquota: "10240"
+                          quota: "10240"
+                          relay_all_recipients: "0"
+                          rl_frame: s
+                          rl_value: "10"
+                          tags: ["tag1", "tag2"]
+                        - null
+                      msg:
+                        - domain_added
+                        - domain.tld
+                      type: success
+              schema:
+                properties:
+                  log:
+                    description: contains request object
+                    items: {}
+                    type: array
+                  msg:
+                    items: {}
+                    type: array
+                  type:
+                    enum:
+                      - success
+                      - danger
+                      - error
+                    type: string
+                type: object
+          description: OK
+          headers: {}
       tags:
         - Domains
       description: >-
