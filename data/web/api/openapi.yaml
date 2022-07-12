@@ -44,9 +44,12 @@ components:
             required:
               - type
               - msg
+      type: object
+
     AddAlias:
       description: AddAlias OK
       headers: {}
+      type: object
       content:
         application/json:
           examples:
@@ -84,6 +87,7 @@ components:
     AddDomain:
       description: AddDomain OK
       headers: {}
+      type: object
       content:
         application/json:
           examples:
@@ -537,9 +541,9 @@ paths:
     post:
       responses:
         "401":
-          $ref: "#/components/responses/Unauthorized"
+          $ref: "#/components/schemas/Unauthorized"
         "200":
-          $ref: "#/components/responses/AddDomain"
+          $ref: "#/components/schemas/AddDomain"
       tags:
         - Domains
       description: >-
