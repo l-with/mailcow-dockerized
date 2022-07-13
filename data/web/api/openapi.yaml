@@ -28,10 +28,9 @@ components:
       in: header
       name: X-API-Key
   schemas:
-    properties:
-      application/json:
-        schema:
-          type: object
+    Unauthorized:
+      properties:
+        application/json:
           properties:
             type:
               type: string
@@ -42,6 +41,39 @@ components:
           required:
             - type
             - msg
+      type: object
+    AddAlias200:
+      properties:
+        log:
+          description: contains request object
+          items: {}
+          type: array
+        msg:
+          items: {}
+          type: array
+        type:
+          enum:
+            - success
+            - danger
+            - error
+          type: string
+      type: object
+    AddTimeLimitedAlias200:
+      properties:
+        log:
+          description: contains request object
+          items: {}
+          type: array
+        msg:
+          items: {}
+          type: array
+        type:
+          enum:
+            - success
+            - danger
+            - error
+          type: string
+      type: object
 
 security:
   - ApiKeyAuth: []
@@ -75,24 +107,10 @@ paths:
                         - alias@domain.tld
                       type: success
               schema:
-                properties:
-                  log:
-                    description: contains request object
-                    items: {}
-                    type: array
-                  msg:
-                    items: {}
-                    type: array
-                  type:
-                    enum:
-                      - success
-                      - danger
-                      - error
-                    type: string
-                type: object
+                $ref: "#/components/schemas/AddAlias200"
           description: OK
           headers: {}
-        tags:
+      tags:
         - Aliases
       description: >-
         You may create your own mailbox alias using this action. It takes a JSON
@@ -156,21 +174,7 @@ paths:
                         - info@domain.tld
                       type: success
               schema:
-                properties:
-                  log:
-                    description: contains request object
-                    items: {}
-                    type: array
-                  msg:
-                    items: {}
-                    type: array
-                  type:
-                    enum:
-                      - success
-                      - danger
-                      - error
-                    type: string
-                type: object
+                $ref: "#/components/schemas/AddTimeLimitedAlias200"
           description: OK
           headers: {}
       tags:
