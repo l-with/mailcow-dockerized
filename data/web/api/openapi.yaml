@@ -2258,7 +2258,7 @@ paths:
                   #     type: array
                   #   msg:
                   #     items: {}
-                  #     type: array
+                  #     type: array # this is not an array, when the mailbox is not found
                   #   type:
                   #     enum:
                   #       - success
