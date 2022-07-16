@@ -1781,10 +1781,14 @@ paths:
         content:
           application/json:
             schema:
+              example:
+                - "6"
+                - "9"
               items:
-                example: "6"
-                type: string
-              type: array
+                description: contains list of id of aliases you want to delete
+                type: array
+                items:
+                  type string
       summary: Delete alias
   /api/v1/delete/app-passwd:
     post:
