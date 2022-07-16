@@ -1784,11 +1784,13 @@ paths:
               example:
                 - "6"
                 - "9"
-              items:
-                description: contains list of id of aliases you want to delete
-                type: array
+              properties:
                 items:
-                  type string
+                  description: contains list of ids of aliases you want to delete
+                  type: array
+                  items:
+                    type: string
+              type: object
       summary: Delete alias
   /api/v1/delete/app-passwd:
     post:
