@@ -9,7 +9,7 @@ function relayhost($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -53,7 +53,7 @@ function relayhost($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -109,7 +109,7 @@ function relayhost($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -186,7 +186,7 @@ function transport($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -219,7 +219,7 @@ function transport($_action, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_data_log),
-              'msg' => 'invalid_nexthop_authenticated'
+              'msg' => array('invalid_nexthop_authenticated')
             );
             return false;
           }
@@ -315,7 +315,7 @@ function transport($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -356,7 +356,7 @@ function transport($_action, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_data_log),
-                'msg' => 'transport_dest_exists'
+                'msg' => array('transport_dest_exists')
               );
               return false;
             }
@@ -451,7 +451,7 @@ function transport($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }

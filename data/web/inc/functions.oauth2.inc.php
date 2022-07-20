@@ -7,7 +7,7 @@ function oauth2($_action, $_type, $_data = null) {
     $_SESSION['return'][] = array(
       'type' => 'danger',
       'log' => array(__FUNCTION__, $_action, $_type, $_data),
-      'msg' => 'access_denied'
+      'msg' => array('access_denied')
     );
     return false;
   }
@@ -26,7 +26,7 @@ function oauth2($_action, $_type, $_data = null) {
             // $_SESSION['return'][] = array(
               // 'type' => 'danger',
               // 'log' => array(__FUNCTION__, $_action, $_type, $_data),
-              // 'msg' => 'access_denied'
+              // 'msg' => array('access_denied')
             // );
             // return false;
           // }
@@ -34,7 +34,7 @@ function oauth2($_action, $_type, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data),
-              'msg' => 'Invalid scope'
+              'msg' => array('Invalid scope')
             );
             return false;
           }
@@ -46,7 +46,7 @@ function oauth2($_action, $_type, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data),
-              'msg' => 'Client ID exists'
+              'msg' => array('Client ID exists')
             );
             return false;
           }
@@ -61,7 +61,7 @@ function oauth2($_action, $_type, $_data = null) {
           $_SESSION['return'][] = array(
             'type' => 'success',
             'log' => array(__FUNCTION__, $_action, $_type, $_data),
-            'msg' => 'Added client access'
+            'msg' => array('Added client access')
           );
         break;
       }
@@ -79,7 +79,7 @@ function oauth2($_action, $_type, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               return false;
             }
@@ -123,7 +123,7 @@ function oauth2($_action, $_type, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data),
-                'msg' => 'Redirect/Callback URL cannot be empty'
+                'msg' => array('Redirect/Callback URL cannot be empty')
               );
               continue;
             }
@@ -152,7 +152,7 @@ function oauth2($_action, $_type, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -175,7 +175,7 @@ function oauth2($_action, $_type, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               return false;
             }
@@ -198,7 +198,7 @@ function oauth2($_action, $_type, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               return false;
             }

@@ -9,7 +9,7 @@ function rsettings($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -20,7 +20,7 @@ function rsettings($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'map_content_empty'
+          'msg' => array('map_content_empty')
         );
         return false;
       }
@@ -34,7 +34,7 @@ function rsettings($_action, $_data = null) {
       $_SESSION['return'][] = array(
         'type' => 'success',
         'log' => array(__FUNCTION__, $_action, $_data_log),
-        'msg' => 'settings_map_added'
+        'msg' => array('settings_map_added')
       );
     break;
     case 'edit':
@@ -42,7 +42,7 @@ function rsettings($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -86,7 +86,7 @@ function rsettings($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -138,7 +138,7 @@ function rspamd_maps($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, '-'),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }

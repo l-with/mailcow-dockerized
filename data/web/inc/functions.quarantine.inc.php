@@ -16,7 +16,7 @@ function quarantine($_action, $_data = null) {
           array(
             'type' => 'danger',
             'log' => array(__FUNCTION__, $_action, $_data_log),
-            'msg' => 'access_denied'
+            'msg' => array('access_denied')
           )
         )));
         return false;
@@ -32,7 +32,7 @@ function quarantine($_action, $_data = null) {
           array(
             'type' => 'danger',
             'log' => array(__FUNCTION__, $_action, $_data_log),
-            'msg' => 'access_denied'
+            'msg' => array('access_denied')
           )
         )));
         return false;
@@ -59,7 +59,7 @@ function quarantine($_action, $_data = null) {
           array(
             'type' => 'danger',
             'log' => array(__FUNCTION__, $_action, $_data_log),
-            'msg' => 'access_denied'
+            'msg' => array('access_denied')
           )
         )));
         return false;
@@ -75,7 +75,7 @@ function quarantine($_action, $_data = null) {
           array(
             'type' => 'danger',
             'log' => array(__FUNCTION__, $_action, $_data_log),
-            'msg' => 'access_denied'
+            'msg' => array('access_denied')
           )
         )));
         return false;
@@ -186,7 +186,7 @@ function quarantine($_action, $_data = null) {
               array(
                 'type' => 'warning',
                 'log' => array(__FUNCTION__, $_action, $_data_log),
-                'msg' => 'Cannot connect to Postfix'
+                'msg' => array('Cannot connect to Postfix')
               )
             )));
             return false;
@@ -200,7 +200,7 @@ function quarantine($_action, $_data = null) {
                 array(
                   'type' => 'warning',
                   'log' => array(__FUNCTION__, $_action, $_data_log),
-                  'msg' => 'Postfix returned SMTP code ' . $smtp_resource . ', expected ' . $postfix_talk[$i][0]
+                  'msg' => array('Postfix returned SMTP code ' . $smtp_resource . ', expected ' . $postfix_talk[$i][0])
                 )
               )));
             return false;
@@ -236,7 +236,7 @@ function quarantine($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -245,7 +245,7 @@ function quarantine($_action, $_data = null) {
           $_SESSION['return'][] = array(
             'type' => 'danger',
             'log' => array(__FUNCTION__, $_action, $_data_log),
-            'msg' => 'access_denied'
+            'msg' => array('access_denied')
           );
           continue;
         }
@@ -256,7 +256,7 @@ function quarantine($_action, $_data = null) {
           $_SESSION['return'][] = array(
             'type' => 'danger',
             'log' => array(__FUNCTION__, $_action, $_data_log),
-            'msg' => 'access_denied'
+            'msg' => array('access_denied')
           );
           continue;
         }
@@ -278,7 +278,7 @@ function quarantine($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -288,7 +288,7 @@ function quarantine($_action, $_data = null) {
           $_SESSION['return'][] = array(
             'type' => 'danger',
             'log' => array(__FUNCTION__, $_action, $_data_log),
-            'msg' => 'access_denied'
+            'msg' => array('access_denied')
           );
           return false;
         }
@@ -355,7 +355,7 @@ function quarantine($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'success',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'saved_settings'
+          'msg' => array('saved_settings')
         );
       }
       // Release item
@@ -372,7 +372,7 @@ function quarantine($_action, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_data_log),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             continue;
           }
@@ -383,7 +383,7 @@ function quarantine($_action, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_data_log),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             continue;
           }
@@ -480,7 +480,7 @@ function quarantine($_action, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'warning',
                 'log' => array(__FUNCTION__, $_action, $_data_log),
-                'msg' => 'Cannot connect to Postfix'
+                'msg' => array('Cannot connect to Postfix')
               );
               return false;
             }
@@ -492,7 +492,7 @@ function quarantine($_action, $_data = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'warning',
                   'log' => array(__FUNCTION__, $_action, $_data_log),
-                  'msg' => 'Postfix returned SMTP code ' . $smtp_resource . ', expected ' . $postfix_talk[$i][0]
+                  'msg' => array('Postfix returned SMTP code ' . $smtp_resource . ', expected ' . $postfix_talk[$i][0])
                 );
                 return false;
               }
@@ -624,7 +624,7 @@ function quarantine($_action, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_data_log),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             continue;
           }
@@ -635,7 +635,7 @@ function quarantine($_action, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_data_log),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             continue;
           }
@@ -816,7 +816,7 @@ function quarantine($_action, $_data = null) {
         array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         )
       )));
       return false;
@@ -828,7 +828,7 @@ function quarantine($_action, $_data = null) {
           array(
             'type' => 'danger',
             'log' => array(__FUNCTION__, $_action, $_data_log),
-            'msg' => 'access_denied'
+            'msg' => array('access_denied')
           )
         )));
         return false;

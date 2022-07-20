@@ -8,7 +8,7 @@ function ratelimit($_action, $_scope, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -28,7 +28,7 @@ function ratelimit($_action, $_scope, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-                'msg' => 'rl_timeframe'
+                'msg' => array('rl_timeframe')
               );
               continue;
             }
@@ -36,7 +36,7 @@ function ratelimit($_action, $_scope, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -88,7 +88,7 @@ function ratelimit($_action, $_scope, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-                'msg' => 'rl_timeframe'
+                'msg' => array('rl_timeframe')
               );
               continue;
             }
@@ -97,7 +97,7 @@ function ratelimit($_action, $_scope, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -197,7 +197,7 @@ function ratelimit($_action, $_scope, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -215,7 +215,7 @@ function ratelimit($_action, $_scope, $_data = null) {
           $_SESSION['return'][] = array(
             'type' => 'success',
             'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-            'msg' => 'hash_deleted'
+            'msg' => array('hash_deleted')
           );
           return true;
         }
@@ -223,7 +223,7 @@ function ratelimit($_action, $_scope, $_data = null) {
           $_SESSION['return'][] = array(
             'type' => 'warning',
             'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-            'msg' => 'hash_not_found'
+            'msg' => array('hash_not_found')
           );
           return false;
         }

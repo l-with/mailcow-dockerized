@@ -103,7 +103,7 @@ function dkim($_action, $_data = null, $privkey = false) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -145,7 +145,7 @@ function dkim($_action, $_data = null, $privkey = false) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -271,7 +271,7 @@ function dkim($_action, $_data = null, $privkey = false) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -287,7 +287,7 @@ function dkim($_action, $_data = null, $privkey = false) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }

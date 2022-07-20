@@ -14,7 +14,7 @@ function tls_policy_maps($_action, $_data = null, $attr = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data, $_attr),
-          'msg' => 'tls_policy_map_dest_invalid'
+          'msg' => array('tls_policy_map_dest_invalid')
         );
         return false;
       }
@@ -24,7 +24,7 @@ function tls_policy_maps($_action, $_data = null, $attr = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_data, $_attr),
-              'msg' => 'tls_policy_map_parameter_invalid'
+              'msg' => array('tls_policy_map_parameter_invalid')
             );
             return false;
           }
@@ -70,7 +70,7 @@ function tls_policy_maps($_action, $_data = null, $attr = null) {
           $_SESSION['return'][] = array(
             'type' => 'danger',
             'log' => array(__FUNCTION__, $_action, $_data, $_attr),
-            'msg' => 'access_denied'
+            'msg' => array('access_denied')
           );
           continue;
         }
@@ -78,7 +78,7 @@ function tls_policy_maps($_action, $_data = null, $attr = null) {
           $_SESSION['return'][] = array(
             'type' => 'danger',
             'log' => array(__FUNCTION__, $_action, $_data, $_attr),
-            'msg' => 'tls_policy_map_dest_invalid'
+            'msg' => array('tls_policy_map_dest_invalid')
           );
           return false;
         }
@@ -88,7 +88,7 @@ function tls_policy_maps($_action, $_data = null, $attr = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_data, $_attr),
-                'msg' => 'tls_policy_map_parameter_invalid'
+                'msg' => array('tls_policy_map_parameter_invalid')
               );
               return false;
             }

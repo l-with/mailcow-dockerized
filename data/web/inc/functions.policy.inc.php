@@ -10,7 +10,7 @@ function policy($_action, $_scope, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -22,7 +22,7 @@ function policy($_action, $_scope, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               return false;
             }
@@ -32,7 +32,7 @@ function policy($_action, $_scope, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -47,7 +47,7 @@ function policy($_action, $_scope, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-              'msg' => 'policy_list_from_invalid'
+              'msg' => array('policy_list_from_invalid')
             );
             return false;
           }
@@ -55,7 +55,7 @@ function policy($_action, $_scope, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -69,7 +69,7 @@ function policy($_action, $_scope, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-              'msg' => 'policy_list_from_exists'
+              'msg' => array('policy_list_from_exists')
             );
             return false;
           }
@@ -94,7 +94,7 @@ function policy($_action, $_scope, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -109,7 +109,7 @@ function policy($_action, $_scope, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-              'msg' => 'policy_list_from_invalid'
+              'msg' => array('policy_list_from_invalid')
             );
             return false;
           }
@@ -117,7 +117,7 @@ function policy($_action, $_scope, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -131,7 +131,7 @@ function policy($_action, $_scope, $_data = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-              'msg' => 'policy_list_from_exists'
+              'msg' => array('policy_list_from_exists')
             );
             return false;
           }
@@ -155,7 +155,7 @@ function policy($_action, $_scope, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -167,7 +167,7 @@ function policy($_action, $_scope, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -179,7 +179,7 @@ function policy($_action, $_scope, $_data = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'danger',
                   'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-                  'msg' => 'access_denied'
+                  'msg' => array('access_denied')
                 );
                 continue;
               }
@@ -189,7 +189,7 @@ function policy($_action, $_scope, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -228,7 +228,7 @@ function policy($_action, $_scope, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -239,7 +239,7 @@ function policy($_action, $_scope, $_data = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_scope, $_data_log),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }

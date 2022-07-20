@@ -6,7 +6,7 @@ function quota_notification($_action, $_data = null) {
     $_SESSION['return'][] = array(
       'type' => 'danger',
       'log' => array(__FUNCTION__, $_action, $_data_log),
-      'msg' => 'access_denied'
+      'msg' => array('access_denied')
     );
     return false;
   }
@@ -41,7 +41,7 @@ function quota_notification($_action, $_data = null) {
       $_SESSION['return'][] = array(
         'type' => 'success',
         'log' => array(__FUNCTION__, $_action, $_data_log),
-        'msg' => 'saved_settings'
+        'msg' => array('saved_settings')
       );
     break;
     case 'get':
@@ -72,7 +72,7 @@ function quota_notification_bcc($_action, $_data = null) {
     $_SESSION['return'][] = array(
       'type' => 'danger',
       'log' => array(__FUNCTION__, $_action, $_data_log),
-      'msg' => 'access_denied'
+      'msg' => array('access_denied')
     );
     return false;
   }
@@ -83,7 +83,7 @@ function quota_notification_bcc($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }
@@ -121,7 +121,7 @@ function quota_notification_bcc($_action, $_data = null) {
       $_SESSION['return'][] = array(
         'type' => 'success',
         'log' => array(__FUNCTION__, $_action, $_data_log),
-        'msg' => 'saved_settings'
+        'msg' => array('saved_settings')
       );
     break;
     case 'get':
@@ -130,7 +130,7 @@ function quota_notification_bcc($_action, $_data = null) {
         $_SESSION['return'][] = array(
           'type' => 'danger',
           'log' => array(__FUNCTION__, $_action, $_data_log),
-          'msg' => 'access_denied'
+          'msg' => array('access_denied')
         );
         return false;
       }

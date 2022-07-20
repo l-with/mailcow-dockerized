@@ -15,7 +15,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -24,7 +24,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               return false;
             }
@@ -39,7 +39,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'validity_missing'
+              'msg' => array('validity_missing')
             );
             return false;
           }
@@ -57,7 +57,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'domain_invalid'
+              'msg' => array('domain_invalid')
             );
             return false;
           }
@@ -80,7 +80,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -115,14 +115,14 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'success',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'dovecot_restart_success'
+                  'msg' => array('dovecot_restart_success')
                 );
               }
               else {
                 $_SESSION['return'][] = array(
                   'type' => 'warning',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'dovecot_restart_failed'
+                  'msg' => array('dovecot_restart_failed')
                 );
               }
             }
@@ -150,14 +150,14 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'success',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'dovecot_restart_success'
+                  'msg' => array('dovecot_restart_success')
                 );
               }
               else {
                 $_SESSION['return'][] = array(
                   'type' => 'warning',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'dovecot_restart_failed'
+                  'msg' => array('dovecot_restart_failed')
                 );
               }
             }
@@ -174,14 +174,14 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'invalid_filter_type'
+              'msg' => array('invalid_filter_type')
             );
             return false;
           }
           $_SESSION['return'][] = array(
             'type' => 'success',
             'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-            'msg' => 'global_filter_written'
+            'msg' => array('global_filter_written')
           );
           return true;
         case 'filter':
@@ -190,7 +190,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -199,7 +199,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               return false;
             }
@@ -214,7 +214,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'no_user_defined'
+              'msg' => array('no_user_defined')
             );
             return false;
           }
@@ -226,7 +226,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'script_empty'
+              'msg' => array('script_empty')
             );
             return false;
           }
@@ -245,7 +245,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'value_missing'
+              'msg' => array('value_missing')
             );
             return false;
           }
@@ -253,7 +253,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'filter_type'
+              'msg' => array('filter_type')
             );
             return false;
           }
@@ -288,7 +288,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -297,7 +297,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               return false;
             }
@@ -312,7 +312,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'no_user_defined'
+              'msg' => array('no_user_defined')
             );
             return false;
           }
@@ -352,7 +352,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'bad character SPACE'
+                'msg' => array('bad character SPACE')
               );
               return false;
             }
@@ -363,7 +363,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'bad option '. $param
+                'msg' => array('bad option '. $param)
               );
               return false;
             }
@@ -387,7 +387,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -395,7 +395,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -403,7 +403,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             // $_SESSION['return'][] = array(
               // 'type' => 'danger',
               // 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              // 'msg' => 'access_denied'
+              // 'msg' => array('access_denied')
             // );
             // return false;
           // }
@@ -411,7 +411,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -419,7 +419,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -472,7 +472,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_extra),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -490,7 +490,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'mailbox_defquota_exceeds_mailbox_maxquota'
+                'msg' => array('mailbox_defquota_exceeds_mailbox_maxquota')
             );
             return false;
           }
@@ -498,7 +498,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'mailbox_quota_exceeds_domain_quota'
+              'msg' => array('mailbox_quota_exceeds_domain_quota')
             );
             return false;
           }
@@ -506,7 +506,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'defquota_empty'
+                'msg' => array('defquota_empty')
             );
             return false;
           }
@@ -514,7 +514,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'maxquota_empty'
+              'msg' => array('maxquota_empty')
             );
             return false;
           }
@@ -534,7 +534,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'domain_invalid'
+              'msg' => array('domain_invalid')
             );
             return false;
           }
@@ -568,7 +568,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'domain_cannot_match_hostname'
+              'msg' => array('domain_cannot_match_hostname')
             );
             return false;
           }
@@ -631,7 +631,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'success',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'domain_add_dkim_available'
+                'msg' => array('domain_add_dkim_available')
               );
             }
             else {
@@ -652,7 +652,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'warning',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'domain_added_sogo_failed'
+                'msg' => array('domain_added_sogo_failed')
               );
               return false;
             }
@@ -678,7 +678,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'comment_too_long'
+              'msg' => array('comment_too_long')
             );
             return false;
           }
@@ -686,7 +686,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'alias_empty'
+              'msg' => array('alias_empty')
             );
             return false;
           }
@@ -694,7 +694,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'goto_empty'
+              'msg' => array('goto_empty')
             );
             return false;
           }
@@ -759,7 +759,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'max_alias_exceeded'
+                'msg' => array('max_alias_exceeded')
               );
               return false;
             }
@@ -819,7 +819,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -865,7 +865,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -873,7 +873,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'target_domain_invalid'
+              'msg' => array('target_domain_invalid')
             );
             return false;
           }
@@ -881,7 +881,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -970,7 +970,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'success',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'domain_add_dkim_available'
+                  'msg' => array('domain_add_dkim_available')
                 );
               }
               else {
@@ -992,7 +992,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'mailbox_invalid'
+              'msg' => array('mailbox_invalid')
             );
             return false;
           }
@@ -1000,7 +1000,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'mailbox_invalid'
+              'msg' => array('mailbox_invalid')
             );
             return false;
           }
@@ -1013,7 +1013,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'unlimited_quota_acl'
+              'msg' => array('unlimited_quota_acl')
             );
             return false;
           }
@@ -1054,7 +1054,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'domain_invalid'
+              'msg' => array('domain_invalid')
             );
             return false;
           }
@@ -1062,7 +1062,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -1222,7 +1222,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'resource_invalid'
+              'msg' => array('resource_invalid')
             );
             return false;
           }
@@ -1230,7 +1230,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'description_invalid'
+              'msg' => array('description_invalid')
             );
             return false;
           }
@@ -1241,7 +1241,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'resource_invalid'
+              'msg' => array('resource_invalid')
             );
             return false;
           }
@@ -1249,7 +1249,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'domain_invalid'
+              'msg' => array('domain_invalid')
             );
             return false;
           }
@@ -1257,7 +1257,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -1355,7 +1355,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1395,7 +1395,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -1404,7 +1404,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1417,7 +1417,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1449,7 +1449,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -1458,7 +1458,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1470,7 +1470,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1478,7 +1478,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1508,7 +1508,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -1517,7 +1517,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1529,7 +1529,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1537,7 +1537,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1567,7 +1567,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -1591,7 +1591,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'Invalid spam score, format must be "1,2" where first is low and second is high spam value.'
+                'msg' => array('Invalid spam score, format must be "1,2" where first is low and second is high spam value.')
               );
               continue;
             }
@@ -1627,7 +1627,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -1646,7 +1646,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1679,7 +1679,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -1688,7 +1688,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1753,7 +1753,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -1788,7 +1788,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1808,7 +1808,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'danger',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'bad character SPACE'
+                  'msg' => array('bad character SPACE')
                 );
                 return false;
               }
@@ -1819,7 +1819,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'danger',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'bad option '. $param
+                  'msg' => array('bad option '. $param)
                 );
                 return false;
               }
@@ -1843,7 +1843,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1851,7 +1851,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1859,7 +1859,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1867,7 +1867,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1875,7 +1875,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1939,7 +1939,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -1964,7 +1964,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -1983,7 +1983,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'filter_type'
+                'msg' => array('filter_type')
               );
               continue;
             }
@@ -2100,7 +2100,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'danger',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'access_denied'
+                  'msg' => array('access_denied')
                 );
                 continue;
               }
@@ -2187,7 +2187,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                   $_SESSION['return'][] = array(
                     'type' => 'danger',
                     'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                    'msg' => 'alias_goto_identical'
+                    'msg' => array('alias_goto_identical')
                   );
                   unset($gotos[$i]);
                   continue;
@@ -2247,7 +2247,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'domain_invalid'
+                'msg' => array('domain_invalid')
               );
               continue;
             }
@@ -2264,7 +2264,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'danger',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'domain_invalid'
+                  'msg' => array('domain_invalid')
                 );
                 continue;
               }
@@ -2330,7 +2330,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'danger',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'domain_invalid'
+                  'msg' => array('domain_invalid')
                 );
                 continue;
               }
@@ -2356,7 +2356,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                     'type' => 'danger',
                     'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                    'msg' => 'mailbox_defquota_exceeds_mailbox_maxquota'
+                    'msg' => array('mailbox_defquota_exceeds_mailbox_maxquota')
                 );
                 continue;
               }
@@ -2364,7 +2364,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                     'type' => 'danger',
                     'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                    'msg' => 'defquota_empty'
+                    'msg' => array('defquota_empty')
                 );
                 continue;
               }
@@ -2372,7 +2372,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'danger',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'mailbox_quota_exceeds_domain_quota'
+                  'msg' => array('mailbox_quota_exceeds_domain_quota')
                 );
                 continue;
               }
@@ -2380,7 +2380,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'danger',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'maxquota_empty'
+                  'msg' => array('maxquota_empty')
                 );
                 continue;
               }
@@ -2518,7 +2518,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -2527,7 +2527,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'unlimited_quota_acl'
+                'msg' => array('unlimited_quota_acl')
               );
               return false;
             }
@@ -2535,7 +2535,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -2562,7 +2562,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'danger',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'access_denied'
+                  'msg' => array('access_denied')
                 );
                 return false;
               }
@@ -2869,7 +2869,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -3289,7 +3289,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'warning',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'Could not determine servers default spam score, assuming default'
+                'msg' => array('Could not determine servers default spam score, assuming default')
               );
             }
             else {
@@ -3302,7 +3302,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'warning',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'Could not determine servers default spam score, assuming default'
+              'msg' => array('Could not determine servers default spam score, assuming default')
             );
           }
           curl_close($curl);
@@ -3904,7 +3904,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -3919,7 +3919,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -3944,7 +3944,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -3959,7 +3959,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -3984,7 +3984,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -3996,7 +3996,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -4024,7 +4024,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -4033,7 +4033,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -4060,7 +4060,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -4069,7 +4069,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -4120,7 +4120,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -4129,7 +4129,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'domain_invalid'
+                'msg' => array('domain_invalid')
               );
               continue;
             }
@@ -4152,7 +4152,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'warning',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'Could not move mail storage to garbage collector: ' . $maildir_gc['msg']
+                'msg' => array('Could not move mail storage to garbage collector: ' . $maildir_gc['msg'])
               );
             }
             $stmt = $pdo->prepare("DELETE FROM `domain` WHERE `domain` = :domain");
@@ -4238,7 +4238,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -4270,7 +4270,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'domain_invalid'
+                'msg' => array('domain_invalid')
               );
               continue;
             }
@@ -4282,7 +4282,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -4334,7 +4334,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -4342,7 +4342,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -4355,7 +4355,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'warning',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'Could not move maildir to garbage collector: ' . $maildir_gc['msg']
+                  'msg' => array('Could not move maildir to garbage collector: ' . $maildir_gc['msg'])
                 );
               }
             }
@@ -4363,7 +4363,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'warning',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'Could not move maildir to garbage collector: variables local_part and/or domain empty'
+                'msg' => array('Could not move maildir to garbage collector: variables local_part and/or domain empty')
               );
             }
             if (strtolower(getenv('SKIP_SOLR')) == 'n') {
@@ -4380,7 +4380,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
                 $_SESSION['return'][] = array(
                   'type' => 'warning',
                   'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                  'msg' => 'Could not remove Solr index: ' . print_r($err, true)
+                  'msg' => array('Could not remove Solr index: ' . print_r($err, true))
                 );
               }
               curl_close($curl);
@@ -4531,7 +4531,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -4539,7 +4539,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
@@ -4598,7 +4598,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
             $_SESSION['return'][] = array(
               'type' => 'danger',
               'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-              'msg' => 'access_denied'
+              'msg' => array('access_denied')
             );
             return false;
           }
@@ -4609,7 +4609,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'domain_invalid'
+                'msg' => array('domain_invalid')
               );
               continue;
             }
@@ -4649,7 +4649,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'email invalid'
+                'msg' => array('email invalid')
               );
               continue;
             }
@@ -4660,7 +4660,7 @@ function mailbox($_action, $_type, $_data = null, $_extra = null) {
               $_SESSION['return'][] = array(
                 'type' => 'danger',
                 'log' => array(__FUNCTION__, $_action, $_type, $_data_log, $_attr),
-                'msg' => 'access_denied'
+                'msg' => array('access_denied')
               );
               continue;
             }
